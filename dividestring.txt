@@ -1,0 +1,17 @@
+# Function to split the string
+# Stolen from: https://www.geeksforgeeks.org/split-given-string-into-substrings-of-size-k-by-filling-elements/
+def dividestring(str, K):
+    N = len(str)
+    j, i = 0, 0
+    result = []
+    res = ""
+    while j < N:
+        res += str[j]
+        if len(res) == K:
+            result.append(res)
+            res = ""
+        j += 1
+    if res != "":
+        result.append(res)
+
+    return result
